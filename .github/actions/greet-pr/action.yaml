@@ -1,0 +1,15 @@
+name: Hello PR
+description: Prints a greeting to the command line
+
+inputs:
+  hello:
+    description: PR to greet
+    required: true
+    default: World
+
+runs:
+  using: composite
+  steps:
+    - name: Print greeting
+      shell: bash
+      run: echo "Hello PR ... ${{ inputs.hello }}!"
