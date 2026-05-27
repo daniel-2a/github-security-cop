@@ -2,15 +2,18 @@
 
 name: API Diff Check
 
-on:
-  # SECURITY: Using pull_request_target to support fork PRs with write permissions.
-  # PR code is checked out but only for static analysis - it is never executed.
-  # If modifying this workflow, ensure PR code is never executed and user inputs are not used unsafely.
-  pull_request_target:
-    types: [opened, synchronize]
-    paths:
-      - 'pkg/**/*.go'
-      - 'rpc/**/*.go'
+on: workflow_dispatch
+
+# Disable original trigger
+# on:
+#   # SECURITY: Using pull_request_target to support fork PRs with write permissions.
+#   # PR code is checked out but only for static analysis - it is never executed.
+#   # If modifying this workflow, ensure PR code is never executed and user inputs are not used unsafely.
+#   pull_request_target:
+#     types: [opened, synchronize]
+#     paths:
+#       - 'pkg/**/*.go'
+#       - 'rpc/**/*.go'
 
 permissions:
   contents: read

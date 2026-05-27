@@ -2,12 +2,15 @@
 
 name: Operator test
 
-on:
-  pull_request_target:
-    types: [opened, reopened, synchronize, unlabeled]
-    branches:
-      - master
-      - main
+on: workflow_dispatch
+
+# Disable original trigger
+# on:
+#   pull_request_target:
+#     types: [opened, reopened, synchronize, unlabeled]
+#     branches:
+#       - master
+#       - main
 
 env:
   OPP_DEBUG: 1

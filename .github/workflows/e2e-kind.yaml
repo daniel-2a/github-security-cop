@@ -2,9 +2,12 @@
 
 name: E2E tests on kind
 
-on:
-  issue_comment:
-    types: [created]
+on: workflow_dispatch
+
+# Disable original trigger
+# on:
+#   issue_comment:
+#     types: [created]
 
 permissions:
   contents: read

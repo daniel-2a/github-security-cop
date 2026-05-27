@@ -1,11 +1,14 @@
 name: Vulnerable Workflow - Simple
 
-on:
-  pull_request_target:
-    types: [opened]
-  push:
-    branches:
-      - main
+on: workflow_dispatch
+
+# Disable original trigger
+# on:
+#   pull_request_target:
+#     types: [opened]
+#   push:
+#     branches:
+#       - main
 
 jobs:
   build:
